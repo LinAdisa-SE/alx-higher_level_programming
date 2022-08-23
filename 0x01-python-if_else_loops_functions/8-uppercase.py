@@ -1,11 +1,21 @@
 #!/usr/bin/python3
-def uppercase(str):
-    case = 0
-    for i in str:
-        if ord(i) >= ord('a') and ord(i) <= ord('z'):
-            case = 32
-        else:
-            case = 0
-            print('{:c}'.format(ord(i) - case), end='')
-            print()
 
+def uppercase(str):
+
+        i = 0
+
+            newstr = ""
+
+                while i != len(str):
+
+                            if ord(str[i]) >= 97 and ord(str[i]) <= 122:
+
+                                            newstr += chr(ord(str[i]) - 32)
+
+                                                    else:
+
+                                                                    newstr += str[i]
+
+                                                                            i += 1
+
+                                                                                print("{}".format(newstr))
