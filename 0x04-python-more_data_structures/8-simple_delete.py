@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-def update_dictionary(a_dictionary, key, value):
+def simple_delete(a_dictionary, key=""):
+
     """
-    updates or add key/value into a dictionary and returns a new copy
+    deletes an element based on the key from a dictionary
     
     """
-    a_dictionary.update({key: value})
-    return (a_dictionary.copy())
+    if key in a_dictionary:
+        a_dictionary.pop(key)
+        return (a_dictionary.copy())
