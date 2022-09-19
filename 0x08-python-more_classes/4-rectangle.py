@@ -3,25 +3,55 @@
 """
 
 Defines a class Rectangle
-
+Attributes:
+        empty
 """
 
 class Rectangle:
 
-        """Representation of a rectangle"""
+        """
+        Representation of a rectangle
+        Attributes:
+
+                    empty
+        """
         def __init__(self, width=0, height=0):
-            """Initializes the rectangle"""
+            """
+            Initializes the rectangle
+            Init method for Rectangle
+
+                    Attributes:
+
+                                width (int, optional): The width of the rectangle
+
+                                            height (int, optional): The height of the rectangle
+
+            """
             self.width = width
             self.height = height
 
         @property
         def width(self):
-            """getter for the private instance attribute width"""
+            """
+            getter for the private instance attribute width
+            Property height to retrieve it
+
+                    Returns:
+
+                                height (int): The height of the rectangle
+
+            """
             return self.__width
 
         @width.setter
         def width(self, value):
-            """setter for the private instance attribute width"""
+            """
+            setter for the private instance attribute width
+            Returns:
+
+                        width (int): The width of the rectangle
+
+            """
             if type(value) is not int:
                 raise TypeError("width must be an integer")
             if value < 0:
